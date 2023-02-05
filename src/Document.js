@@ -2,7 +2,7 @@ import React, {useState } from "react";
 
 
 
-function Document(props) {
+const Document= ({title,content}) => {
 
 
 
@@ -19,12 +19,12 @@ function Document(props) {
 
     return (
         <>
-            <h1 ClassName="title">{props.title}</h1>
+            <h1 ClassName="title">{title}</h1>
             <div className="content" style={{
 
                width: "400px",height: "300px", overflow: "auto"
     
-            }} onScroll={handleScroll}>{props.content}</div>
+            }} onScroll={handleScroll}>{content}</div>
             <button disabled={onButton ? true : false} >I Agree</button>
         </>
 
