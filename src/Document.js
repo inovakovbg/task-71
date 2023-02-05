@@ -19,7 +19,7 @@ function Document  ({title,content})  {
 
     return (
         <section>
-            <h1 ClassName="title">{title}</h1>
+            <h1 className="title">{title}</h1>
             <div className="content" style={{
 
                width: "400px",height: "300px", overflow: "auto"
