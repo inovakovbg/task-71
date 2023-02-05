@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Document.css"
 
 
 
@@ -8,28 +9,25 @@ import React, { useEffect, useState } from "react";
 function Document(props) {
 
 
-    const [title, setTitle] = useState([]);
-    const [content, Setcontent] = useState('');
+    const [title, Settitle] = useState([]);
+    const [content, Setcontent] = useState();
+    const [onButton,setButton]=useState(true);
 
-
-    useEffect(() => {
-        setTitle("Terms and Conditions");
-     
-    }, [])
-
-
-
+    const handleScroll = event => {
+        if (event.target.scrollTop + event.target.clientHeight >= event.target.scrollHeight) {
+          setButton(false);
+        }
+      };
 
 
 
 
     return (
-        <div>
-            <div className="title">
-                <h1 ClassName="title">{title}</h1>
-            </div>
-            <div className="content" onScroll={props.handleScroll}>{props.notes}</div>
-        </div>
+        <>
+            <h1 ClassName="title">{props.title}</h1>
+            <div className="content" onScroll={handleScroll}>{props.content}</div>
+            <button disabled={onButton ? true : false} >I Agree</button>
+        </>
 
 
 
