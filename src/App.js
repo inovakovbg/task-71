@@ -26,10 +26,9 @@ function App() {
 
   return (
 
-    <div>
-      <Document title="Terms and Conditions" content={content} />
+    <div className="App">
+      <Document title={title} content={content}/>
     </div>
-
 
 
   );

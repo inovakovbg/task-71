@@ -1,5 +1,5 @@
 import React, {useState } from "react";
-import "./Components/Document.css"
+
 
 
 function Document(props) {
@@ -20,7 +20,11 @@ function Document(props) {
     return (
         <>
             <h1 ClassName="title">{props.title}</h1>
-            <div className="content" onScroll={handleScroll}>{props.content}</div>
+            <div className="content" style={{
+
+               width: "400px",height: "300px", overflow: "auto"
+    
+            }} onScroll={handleScroll}>{props.content}</div>
             <button disabled={onButton ? true : false} >I Agree</button>
         </>
 
