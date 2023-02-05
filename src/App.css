@@ -4,3 +4,9 @@
   justify-content: center;
   height: 100vh;
 }
+
+.content{
+  width: 200px;
+  height: 65px;
+  border: 1px;
+}
