@@ -2,7 +2,7 @@ import React, {useState } from "react";
 
 
 
-const Document= ({title,content}) => {
+function Document  ({title,content})  {
 
 
 
@@ -18,7 +18,7 @@ const Document= ({title,content}) => {
 
 
     return (
-        <>
+        <section>
             <h1 ClassName="title">{title}</h1>
             <div className="content" style={{
 
@@ -26,7 +26,7 @@ const Document= ({title,content}) => {
     
             }} onScroll={handleScroll}>{content}</div>
             <button disabled={onButton ? true : false} >I Agree</button>
-        </>
+        </section>
 
 
 
