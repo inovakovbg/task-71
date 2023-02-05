@@ -4,14 +4,14 @@ import React, { useState, useEffect } from "react";
 
 function App() {
 
-  const [title, Settitle] = useState([]);
+  // const [title, Settitle] = useState([]);
   const [content, Setcontent] = useState();
 
 
 
 
   useEffect(() => {
-    Settitle("Terms and Conditions");
+    // Settitle("Terms and Conditions");
     fetch(
       "https://jaspervdj.be/lorem-markdownum/markdown.txt"
     )
@@ -27,7 +27,7 @@ function App() {
   return (
 
     <div className="App">
-      <Document title={title} content={content}/>
+      <Document title="Terms and Conditions" content={content}/>
     </div>
 
 
