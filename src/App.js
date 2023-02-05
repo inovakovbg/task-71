@@ -1,5 +1,5 @@
 import "./App.css";
-import Document from "./Components/Document";
+import Document from "./Document";
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       "https://jaspervdj.be/lorem-markdownum/markdown.txt"
     )
       .then(response => response.text())
-      .then(text => Setcontent(text))
+      .then(data => Setcontent(data))
   }, [])
 
 
@@ -27,7 +27,7 @@ function App() {
   return (
 
     <div>
-      <Document title={title} content={content} />
+      <Document title="Terms and Conditions" content={content} />
     </div>
 
 
