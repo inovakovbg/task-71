@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import "./Components/Document.css"
 
 
 function Document(props) {
 
 
-    const [title, Settitle] = useState([]);
-    const [content, Setcontent] = useState();
+
     const [onButton,setButton]=useState(true);
 
     const handleScroll = event => {
